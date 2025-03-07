@@ -1,0 +1,395 @@
+/* BODY */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #ffdde1);
+  color: #333;
+}
+
+/* HEADER */
+header {
+  position: fixed; /* Biar tetap di atas */
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(120deg, #f5aab6, #fbcbda, #fde1e9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Supaya header nggak ketiban konten lain */
+}
+
+h1 {
+  margin-right: 20px;
+  font-size: 24px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  transition: color 0.3s ease; /* Efek perubahan warna */
+}
+
+/* Warna navbar di mode gelap */
+.dark-theme {
+  background-color: #222;
+  color: white;
+}
+
+.dark-theme nav ul li a {
+  color: white;
+}
+
+nav ul li a:hover {
+  color: #0033ff;
+}
+
+/* Biar tombolnya nempel di kanan */
+#themeToggle {
+  margin-left: auto; /* Dorong tombol ke kanan */
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  background: #ff4757;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+#themeToggle:hover {
+  background: #db7860;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: "merriweather", serif;
+}
+
+#pengalaman p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: "merriweather", serif;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: scale(0.8) translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.profile-pic {
+  width: 300px; /* Sesuaikan ukuran foto */
+  height: auto; /* Sesuaikan ukuran foto */
+  border-radius: 10px;
+}
+
+#about p {
+  flex: 1; /* Supaya teks memenuhi sisa ruang */
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 150px; /* Ukuran lebih kecil untuk tampilan mobile */
+  }
+
+  #about p {
+    text-align: justify;
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+figure {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.projects figure {
+  opacity: 0;
+  transform: scale(0.8) translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.projects figure.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Hover Effect buat gambar */
+.projects figure img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.projects figure:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+button {
+  background: #ff0318;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #db7860;
+  transform: scale(1.05);
+}
+
+footer {
+  background: #1b1e24;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+  color: green;
+  font-weight: bold;
+}
+
+.dark-theme {
+  background: #121212;
+  color: #ffffff;
+}
+
+.dark-theme header {
+  background: #1e1e1e;
+}
+
+.dark-theme button {
+  background: #ffdd57;
+  color: #333;
+}
+
+.dark-theme figcaption {
+  color: #000000 !important;
+}
+
+#contact {
+  background: rgba(255, 255, 255, 0.8); /* Latar belakang terang */
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact label {
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  color: #333;
+}
+/* Mode Gelap */
+.dark-theme #contact {
+  background: rgba(30, 30, 30, 0.9); /* Latar belakang gelap */
+  color: white;
+}
+
+.dark-theme #contact label {
+  color: white;
+}
+
+.dark-theme #contact input {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-theme #contact button {
+  background: #ffdd57;
+  color: #333;
+}
+
+.dark-theme #contact button:hover {
+  background: #e6c300;
+}
+
+/* Styling form container */
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling label */
+.contact-container label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Styling input dan textarea */
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Hover dan focus effect */
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Styling khusus untuk textarea */
+.contact-container textarea {
+  height: 120px;
+  resize: vertical; /* Biar user bisa resize */
+}
+
+/* Styling tombol submit */
+.contact-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Hover effect untuk tombol */
+.contact-container button:hover {
+  background: #0056b3;
+}
+
+/* Mode gelap */
+.dark-theme .contact-container {
+  background: #222;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .contact-container label {
+  color: #ddd;
+}
+
+.dark-theme .contact-container input,
+.dark-theme .contact-container textarea {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-theme .contact-container input:focus,
+.dark-theme .contact-container textarea:focus {
+  border-color: #66b3ff;
+}
+
+.dark-theme .contact-container button {
+  background: #66b3ff;
+  color: #222;
+}
+
+.dark-theme .contact-container button:hover {
+  background: #3399ff;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTop:hover {
+  background: #db7860;
+  transform: scale(1.1);
+}

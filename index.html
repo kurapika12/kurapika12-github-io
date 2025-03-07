@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Keren</title>
+    <link rel="stylesheet" href="./static/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>ALAM</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#pengalaman">Pengalaman</a></li>
+          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Mode Gelap</button>
+    </header>
+
+    <section id="about">
+      <h2>Muhammad Aslam Hidayat</h2>
+      <div class="about-container">
+        <img src="./image/alam1.jpg" alt="Foto Profil" class="profile-pic" />
+        <p>
+          Saya adalah seorang mahasiswa Ilmu Komputer yang memiliki ketertarikan
+          dalam pengembangan web, keamanan siber, dan analisis data. Dengan
+          pengalaman dalam PHP, Laravel, Python, dan pengolahan citra digital,
+          saya selalu berusaha mengeksplorasi teknologi baru dan mengikuti
+          perkembangan dunia IT. Saya juga aktif dalam kompetisi CTF dan proyek
+          pengembangan aplikasi. Selain itu, saya memiliki visi untuk membangun
+          karier yang sukses serta mencapai impian saya dalam waktu yang telah
+          saya tetapkan.
+        </p>
+      </div>
+    </section>
+
+    <section id="pengalaman">
+      <h2>Pengalaman Hidup</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year"><strong>2021 - 2023</strong></div>
+          <div class="desc">
+            <p>SMA Negeri 4 Wangi-Wangi | MIPA</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="year"><strong>2021 - Sekarang</strong></div>
+          <div class="desc">
+            <p>
+              Freelancer | Mengerjakan berbagai proyek dan tugas siswa maupun
+              mahasiswa
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="year"><strong>2023 - Sekarang</strong></div>
+          <div class="desc">
+            <p>Universitas Haluoleo | Program Studi Ilmu Komputer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portofolio</h2>
+      <div class="projects">
+        <figure>
+          <img src="./image/project-1.jpg" alt="Proyek 1" />
+          <figcaption>Dashboard Keuangan</figcaption>
+        </figure>
+        <figure>
+          <img src="./image/project-2.png" alt="Proyek 2" />
+          <figcaption>Dashboard Portofolio Investasi</figcaption>
+        </figure>
+        <figure>
+          <img src="./image/project-3.jpg" alt="Proyek 3" />
+          <figcaption>Website Properti</figcaption>
+        </figure>
+        <figure>
+          <img src="./image/project-8.jpg" alt="Proyek 4" />
+          <figcaption>Aplikasi Manajemen Tugas</figcaption>
+        </figure>
+        <figure>
+          <img src="./image/project1.jpeg" alt="Proyek 5" />
+          <figcaption>Foto dengan Ilustrasi Lucu</figcaption>
+        </figure>
+        <figure>
+          <img src="./image/project1.jpeg" alt="Proyek 6" />
+          <figcaption>Foto dengan Ilustrasi Lucu</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Kontak</h2>
+      <div class="contact-container">
+        <form id="contact-form">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Kirim ke WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Muhammad Aslam Hidayat</p>
+    </footer>
+
+    <script src="./static/script.js"></script>
+    <button id="scrollToTop" onclick="scrollToTop()">⬆</button>
+    <script>
+      window.onload = function () {
+        window.onscroll = function () {
+          let button = document.getElementById("scrollToTop");
+          if (document.documentElement.scrollTop > 100) {
+            button.style.display = "flex";
+          } else {
+            button.style.display = "none";
+          }
+        };
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
