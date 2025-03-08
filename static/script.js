@@ -63,16 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   document.addEventListener("scroll", function () {
-    const items = document.querySelectorAll(".timeline-item");
-    items.forEach((item) => {
-      const rect = item.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        item.classList.add("show");
-      }
-    });
-  });
-
-  document.addEventListener("scroll", function () {
     const projects = document.querySelectorAll(".projects figure");
     projects.forEach((project) => {
       const rect = project.getBoundingClientRect();

@@ -95,15 +95,20 @@ section {
   font-family: "merriweather", serif;
 }
 
-.timeline-item {
-  opacity: 0;
-  transform: scale(0.8) translateY(50px);
-  transition: all 0.8s ease-in-out;
+#pengalaman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 50vh; /* Biar ada sedikit ruang di atas & bawah */
+  text-align: center;
 }
 
-.timeline-item.show {
-  opacity: 1;
-  transform: scale(1) translateY(0);
+#pengalaman table {
+  width: 80%; /* Bisa disesuaikan */
+  max-width: 800px; /* Biar nggak terlalu lebar di layar besar */
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .about-container {
